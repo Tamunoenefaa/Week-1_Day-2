@@ -1,7 +1,11 @@
-const button = document.querySelector('button') // Selects the button Element
-button.addEventListener('click', handleClick) //give the button an action on 'click'
+const form = document.querySelector('form#userForm')
 
-function handleClick(){ //action 
-    const heading=document.querySelector('#dayHeading')
-    heading.textContent = 'Click'
+const handleSubmit = function(ev){
+    ev.preventDefault()
+    const form = ev.target
+    const userName = form.userName.value
+    const heading = document.querySelector('h1')
+    heading.textContent= userName
+  
 }
+form.addEventListener('submit',handleSubmit) 
