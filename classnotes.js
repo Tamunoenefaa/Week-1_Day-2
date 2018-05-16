@@ -8,6 +8,7 @@ const handleSubmit = function(ev){ //Submit action
     const users = document.querySelector('#users') //gets the line div below
     users.innerHTML+= '<p>' + userName + ', ' + age + '</p>' //each time the button is clicks adds name
     form.reset()
+    form.userName.focus()
     
 }
 form.addEventListener('submit',handleSubmit) 
