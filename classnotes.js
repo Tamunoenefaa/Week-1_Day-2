@@ -16,8 +16,18 @@ const handleSubmit = function(ev){ //Submit action
     const ageItem=document.createElement('li')
     ageItem.textContent=`Age: ${age}`//get name of list and sets it equal to age input
 
-    list.appendChild(nameItem)//puts age Item under list
-    list.appendChild(ageItem)//
+    const colorItem=document.createElement('li')
+    colorItem.textContent='Favorite Color: '
+
+    const colorDiv=document.createElement('div')//Display colot in an empty div
+    colorDiv.style.backgroundColor=favoriteColor
+    colorDiv.style.width='6rem'
+    colorDiv.style.height='3rem'
+    colorItem.appendChild(colorDiv)
+
+    list.appendChild(nameItem)//puts  Items under list
+    list.appendChild(ageItem)
+    list.appendChild(colorItem)
 
     users.appendChild(list)//make list a child under the div
  
