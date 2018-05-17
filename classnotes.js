@@ -8,18 +8,18 @@ const handleSubmit = function(ev){ //Submit action
     const favoriteColor = form.favoriteColor.value 
     const users = document.querySelector('#users') //gets the line div below
        
-    const list = document.createElement('ul') //creat a paragraph element and assign variable p
+    const list = document.createElement('ul') //creat a unorderd list element and assign variable list
    
-    const nameItem=document.createElement('li')
-    nameItem.textContent=`Name: ${userName}`
+    const nameItem=document.createElement('li') //creaee li elementt
+    nameItem.textContent=`Name: ${userName}`//get name of list and sets it equal to name input
 
     const ageItem=document.createElement('li')
-    ageItem.textContent=`Age: ${age}`
+    ageItem.textContent=`Age: ${age}`//get name of list and sets it equal to age input
 
-    list.appendChild(nameItem)
-    list.appendChild(ageItem)
+    list.appendChild(nameItem)//puts age Item under list
+    list.appendChild(ageItem)//
 
-    users.appendChild(list) //each time the button is clicks adds name
+    users.appendChild(list)//make list a child under the div
  
     form.reset() // reset form method
     form.userName.focus() //Explicitly tell it to focus on userName variable
