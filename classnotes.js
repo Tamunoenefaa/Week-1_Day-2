@@ -6,7 +6,7 @@ const handleSubmit = function(ev){ //Submit action
     const userName = form.userName.value 
     const age = form.age.value // 
     const users = document.querySelector('#users') //gets the line div below
-    users.innerHTML+= '<p>' + userName + ', ' + age + '</p>' //each time the button is clicks adds name
+    users.innerHTML+= '<p> ${userName}, ${age} </p>' //each time the button is clicks adds name
     form.reset() // reset form method
     form.userName.focus() //Explicitly tell it to focus on userName variable
     
